@@ -4,8 +4,11 @@
 #include <cstdlib>
 #include <vector>
 #include <string>
-#include <math.h>
 using namespace std;
+
+
+
+
 
 int main ()
 {
@@ -23,11 +26,11 @@ int main ()
     {
         double y_1 = theta * (1 + 6 * i);
         y_1 = sqrt(pow(y_1/theta, 2) - 0.25);
-        cout << y_1 << endl;
+        // cout << y_1 << endl;
         arr1.push_back(y_1);
         double y_2 = 5 * theta * (1 + ((6 / 5) * i));
         y_2 = sqrt(pow(y_2/theta, 2) - 0.25); 
-        cout << y_2 << endl;
+       // cout << y_2 << endl;
         arr1.push_back(y_2);
       
 
@@ -35,6 +38,7 @@ int main ()
     }
     int lArr1 = arr1.size();
 
+    
     sort(arr1.begin(), arr1.begin() + lArr1);
     for (int k = 0; k < lArr1; k++){
         //Here we sort out the PI error where all the zeros aren't even. 
@@ -56,11 +60,10 @@ int main ()
     //Seive for the time being as it's not yet perfect
     for(int i = 0; i < number ; i++)
     {
-        if(prime1[i] % 5 !=0 && prime1[i] % 3 != 0)
-        {
+      
             cout << prime1[i]<< endl;
 
-        }
+        
         //  cout << prime1[i]<< endl;
 
     }
